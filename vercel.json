@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/ENGTECH.html" },
+    { "source": "/(.*)", "destination": "/$1" }
+  ]
+}
