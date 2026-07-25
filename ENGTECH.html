@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>ENGTECH 11-YA2 — Loading</title>
+  </head>
+  <body>
+    <div class="skeleton-wrap">
+      <!-- Mobile top bar: title left, hamburger right -->
+      <header class="topbar">
+        <div class="tb-title sk"></div>
+        <div class="tb-burger">
+          <span class="burger-line sk"></span>
+          <span class="burger-line sk"></span>
+          <span class="burger-line sk"></span>
+        </div>
+      </header>
+
+      <aside class="sidebar">
+        <div class="sb-title sk"></div>
+        <nav class="nav">
+          <div class="nav-item sk"></div>
+          <div class="nav-item sk"></div>
+          <div class="nav-item sk"></div>
+          <div class="nav-item sk"></div>
+          <div class="nav-item sk"></div>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <div class="heading-line sk"></div>
+        <div class="heading-line short sk"></div>
+
+        <div class="logo-block sk"></div>
+
+        <div class="para-line sk"></div>
+        <div class="para-line mid sk"></div>
+
+        <!-- Added: bottom-of-page skeleton content -->
+        <div class="section-title sk"></div>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-thumb sk"></div>
+            <div class="card-line sk"></div>
+            <div class="card-line short sk"></div>
+          </div>
+          <div class="card">
+            <div class="card-thumb sk"></div>
+            <div class="card-line sk"></div>
+            <div class="card-line short sk"></div>
+          </div>
+          <div class="card">
+            <div class="card-thumb sk"></div>
+            <div class="card-line sk"></div>
+            <div class="card-line short sk"></div>
+          </div>
+        </div>
+
+        <div class="section-title sk"></div>
+        <div class="para-line sk"></div>
+        <div class="para-line sk"></div>
+        <div class="para-line mid sk"></div>
+
+        <div class="footer-block sk"></div>
+      </main>
+
+      <div class="loading-badge">
+        <span class="spinner"></span>
+        <span class="loading-text"
+          >The Website is Currently on Building Stage…</span
+        >
+      </div>
+    </div>
+
+    <style>
+      :root {
+        --sidebar-bg: #f4f4f4;
+        --border: #1a1a1a;
+        --sk-base: #e8e8e8;
+        --sk-shine: #f6f6f6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        height: 100%;
+        overflow: hidden;
+        overscroll-behavior: none;
+        touch-action: none;
+      }
+
+      .skeleton-wrap {
+        position: relative;
+        width: 100%;
+        min-height: 620px;
+        background: #ffffff;
+        border-top: 3px solid var(--border);
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        overflow: hidden;
+      }
+
+      /* Desktop: fixed sidebar on the left */
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 220px;
+        flex-shrink: 0;
+        background: var(--sidebar-bg);
+        border-right: 1px solid #ddd;
+        padding: 28px 24px;
+        z-index: 10;
+        overflow-y: auto;
+      }
+
+      /* Mobile top bar, hidden on desktop */
+      .topbar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 68px;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--sidebar-bg);
+        border-bottom: 1px solid #ddd;
+        padding: 0 24px;
+        z-index: 20;
+      }
+
+      .tb-title {
+        height: 20px;
+        width: 42%;
+        max-width: 200px;
+        border-radius: 3px;
+      }
+
+      .tb-burger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 26px;
+      }
+
+      .burger-line {
+        height: 3px;
+        width: 100%;
+        border-radius: 2px;
+      }
+
+      .sb-title {
+        height: 18px;
+        width: 78%;
+        border-radius: 3px;
+        margin-bottom: 34px;
+      }
+
+      .nav {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+      }
+
+      .nav-item {
+        height: 13px;
+        border-radius: 3px;
+      }
+      .nav-item:nth-child(1) {
+        width: 45%;
+      }
+      .nav-item:nth-child(2) {
+        width: 60%;
+      }
+      .nav-item:nth-child(3) {
+        width: 52%;
+      }
+      .nav-item:nth-child(4) {
+        width: 48%;
+      }
+      .nav-item:nth-child(5) {
+        width: 68%;
+      }
+
+      .content {
+        margin-left: 220px;
+        padding: 70px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .heading-line {
+        height: 52px;
+        width: 78%;
+        border-radius: 4px;
+        margin-bottom: 18px;
+      }
+      .heading-line.short {
+        width: 40%;
+        margin-bottom: 60px;
+      }
+
+      .logo-block {
+        height: 90px;
+        width: 220px;
+        border-radius: 4px;
+        margin-bottom: 60px;
+      }
+
+      .para-line {
+        height: 16px;
+        width: 66%;
+        border-radius: 3px;
+        margin-bottom: 14px;
+      }
+      .para-line.mid {
+        width: 44%;
+        margin-bottom: 0;
+      }
+
+      .sk {
+        position: relative;
+        background: var(--sk-base);
+        overflow: hidden;
+      }
+
+      .sk::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -150%;
+        width: 150%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          var(--sk-shine) 50%,
+          transparent 100%
+        );
+        animation: shimmer 1.5s infinite;
+      }
+
+      @keyframes shimmer {
+        0% {
+          left: -150%;
+        }
+        100% {
+          left: 150%;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .sk::after {
+          animation: none;
+        }
+      }
+
+      /* Centered glass loading badge, floats above the skeleton */
+      .loading-badge {
+        position: fixed;
+        top: 50%;
+        left: calc(
+          50% + 110px
+        ); /* nudge to visually center over content area (accounts for fixed sidebar) */
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 26px;
+        background: rgba(255, 255, 255, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 999px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        backdrop-filter: blur(14px) saturate(160%);
+        -webkit-backdrop-filter: blur(14px) saturate(160%);
+        z-index: 30;
+        white-space: nowrap;
+      }
+
+      .loading-text {
+        font-size: 14px;
+        font-weight: 600;
+        color: #1a1a1a;
+        letter-spacing: 0.02em;
+      }
+
+      .spinner {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 2.5px solid rgba(26, 26, 26, 0.18);
+        border-top-color: #1a1a1a;
+        animation: spin 0.8s linear infinite;
+        flex-shrink: 0;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .spinner {
+          animation: none;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .loading-badge {
+          left: 50%;
+          padding: 14px 20px;
+        }
+        .loading-text {
+          font-size: 13px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .sidebar {
+          display: none;
+        }
+        .topbar {
+          display: flex;
+        }
+
+        .content {
+          margin-left: 0;
+          margin-top: 68px;
+          padding: 40px 24px;
+          align-items: stretch;
+        }
+
+        .heading-line,
+        .heading-line.short,
+        .logo-block,
+        .para-line {
+          width: 100% !important;
+        }
+      }
+
+      /* Added: bottom-of-page skeleton sections */
+      .section-title {
+        height: 28px;
+        width: 34%;
+        border-radius: 4px;
+        margin: 70px 0 34px;
+        align-self: flex-start;
+      }
+
+      .card-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .card-thumb {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        border-radius: 6px;
+      }
+
+      .card-line {
+        height: 14px;
+        width: 85%;
+        border-radius: 3px;
+      }
+      .card-line.short {
+        width: 55%;
+      }
+
+      .footer-block {
+        width: 100%;
+        height: 120px;
+        border-radius: 6px;
+        margin-top: 80px;
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: 640px) {
+        .section-title {
+          width: 60% !important;
+          margin: 50px 0 24px;
+        }
+
+        .card-grid {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+
+        .footer-block {
+          height: 90px;
+          margin-top: 50px;
+        }
+      }
+    </style>
+  </body>
+</html>
