@@ -6,11 +6,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
-    <title>ENGTECH 11-YA2 — Loading</title>
+    <link rel="icon" type="image/jpeg" href="engtech.jpg" />
+    <title>ENGTECH 11-YA2</title>
+    <
   </head>
   <body>
     <div class="skeleton-wrap">
-      <!-- Mobile top bar: title left, hamburger right -->
       <header class="topbar">
         <div class="tb-title sk"></div>
         <div class="tb-burger">
@@ -40,7 +41,6 @@
         <div class="para-line sk"></div>
         <div class="para-line mid sk"></div>
 
-        <!-- Added: bottom-of-page skeleton content -->
         <div class="section-title sk"></div>
         <div class="card-grid">
           <div class="card">
@@ -110,7 +110,6 @@
         overflow: hidden;
       }
 
-      /* Desktop: fixed sidebar on the left */
       .sidebar {
         position: fixed;
         top: 0;
@@ -125,7 +124,6 @@
         overflow-y: auto;
       }
 
-      /* Mobile top bar, hidden on desktop */
       .topbar {
         display: none;
         position: fixed;
@@ -268,13 +266,12 @@
         }
       }
 
-      /* Centered glass loading badge, floats above the skeleton */
       .loading-badge {
         position: fixed;
         top: 50%;
         left: calc(
           50% + 110px
-        ); /* nudge to visually center over content area (accounts for fixed sidebar) */
+        );
         transform: translate(-50%, -50%);
         display: flex;
         align-items: center;
